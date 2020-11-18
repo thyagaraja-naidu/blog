@@ -3,8 +3,8 @@ title: About
 layout: page
 ---
 
-Hey! This is the "Leaf" Jekyll theme created by <a rel="me" target="_blank" href="https://twitter.com/_SupunKavinda">Supun Kavinda</a>.
+Hey! This blog is built using Jekyll theme created by Thyagaraja Naidu.
 
-You can find the source code of this theme at <a href="https://github.com/SupunKavinda/jekyll-theme-leaf">Github</a>
+You can find the source code of this theme at <a href="https://github.com/thyagaraja-naidu/blog">Github</a>
 
 (Change this by editing `about.md` file)
