@@ -37,10 +37,14 @@ layout: default
 </article>
 
 
-{%- if site.hyvor_talk_website_id -%}
-  <div class="comments">
-    {%- include hyvor-talk-comments.html -%}
-  </div>
-{%- endif -%}
+<div id="hyvor-talk-view"></div>
+<script type="text/javascript">
+    var HYVOR_TALK_WEBSITE = 2414; // DO NOT CHANGE THIS
+    var HYVOR_TALK_CONFIG = {
+        url: '{{ page.url | absolute_url }}',
+        id: '{{page.id}}'
+    };
+</script>
+<script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
 
 
