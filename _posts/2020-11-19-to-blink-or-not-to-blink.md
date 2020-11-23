@@ -26,14 +26,44 @@ Instructions given in this blog should work on most of the ubuntu flavoured OSs.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Goto Microchip website and [download](https://www.microchip.com/mplab/avr-support/avr-and-arm-toolchains-c-compilers) latest version of AVR GCC compiler for linux. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If you need to check whether your linux OS is 32bit or 64bit you can execute below command.
-'''
-$ uname -m
-x86_64
-'''
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So, i will be downloading 64bit avr-gcc toolchain [AVR 8-bit Toolchain 3.6.2 - Linux 64-bit](https://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en607660).
+
+> $ uname -m
+>    <br />x86_64
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;So, i will be downloading 64bit avr-gcc toolchain [AVR 8-bit Toolchain 3.6.2 - Linux 64-bit](https://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en607660), which is latest(and greatest), at the time of this writing.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let's install the downloaded setup file 'avr8-gnu-toolchain-3.6.2.1778-linux.any.x86_64.tar.gz' in linux now. Below set of commands will install the avr-gcc compiler on your PC.
 
+> tar -xzf avr8-gnu-toolchain-3.6.2.1778-linux.any.x86_64.tar.gz
+
+Update the PATH variable to AVR-GCC tool folder
+> $ nano ~/.bashrc
+
+**!!! Beware, you will break the bash command execution if you overwrite PATH variable!!!** 
+
+add at the end of the file to update PATH variable with avr-gcc compiler path 
+> export PATH=$PATH:/home/tools/avr8-gnu-toolchain-linux_x86_64/bin/
+
+A quick check for avr-gcc version can now be done.
+> $ avr-gcc --version
+>    <br />avr-gcc (AVR_8_bit_GNU_Toolchain_3.6.2_1778) 5.4.0
+>    <br />Copyright (C) 2015 Free Software Foundation, Inc.
+>    <br />This is free software; see the source for copying conditions.  There is NO
+>    <br />warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Rejoice, your avr-gcc compiler set up is now complete :)
+
+Unfortunately, we can not use the compiler installation we did just now! We need to still install [avr-libc](https://www.nongnu.org/avr-libc/) & [avr-binutils](https://www.archlinux.org/packages/community/x86_64/avr-binutils/)
+
+> $ sudo apt-get install avr-libc binutils-avr
+
+
+[http://download.savannah.gnu.org/releases/avrdude/](http://download.savannah.gnu.org/releases/avrdude/)
+
+> $ sudo apt-get install avrdude
+
+avrdude-6.3.tar.gz is latest at the time of this blog, lets download and install the same.
 
 
 ![800x600](https://i.picsum.photos/id/688/800/600.jpg)
