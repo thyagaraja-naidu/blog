@@ -16,8 +16,8 @@ title: To blink or not to blink :)
 Instructions given in this blog should work on most of the ubuntu flavoured OSs.
 
 1. Compiler
-2. Your favourite code editor!
-3. Programmer software
+2. Programmer software
+3. Your favourite code editor!
 
 ### Tool setup
 #### AVR GCC Compiler 
@@ -54,16 +54,26 @@ A quick check for avr-gcc version can now be done.
 
 Rejoice, your avr-gcc compiler set up is now complete :)
 
+#### AVR Libc & Binutils
+
 Unfortunately, we can not use the compiler installation we did just now! We need to still install [avr-libc](https://www.nongnu.org/avr-libc/) & [avr-binutils](https://www.archlinux.org/packages/community/x86_64/avr-binutils/)
+
+avr libc provides c runtime libraries for AVR controllers. Binutils is binary utilities to handle AVR binary files.
 
 > $ sudo apt-get install avr-libc binutils-avr
 
-
-[http://download.savannah.gnu.org/releases/avrdude/](http://download.savannah.gnu.org/releases/avrdude/)
-
+#### AVR Programmer utility: AVRDUDE
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We need a programmer software to burn our compiled program into AVR chips. We will be using avrdude software for this. Installation is fairly simple and straight forward. you can install avr dude using below command in terminal.
 > $ sudo apt-get install avrdude
 
-avrdude-6.3.tar.gz is latest at the time of this blog, lets download and install the same.
+#### Your favourite code editor!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Last but not least, we need a editor program to write our programs. i will be using **visual studio code**. Code is a free SW editor developed by Microsoft with open source license. Instaltion procedure is given below on ubuntu.
+
+* goto --> Code download [link](https://code.visualstudio.com/Download)
+* Download __Code.deb__ package for ubuntu. you also have installer files for other OS's on the same link.
+* Install MS code with below command
+  * > $ sudo dpkg -i code_1.51.1-1605051630_amd64.deb
+* MS code is installed now. Close the terminal.
 
 
 ![800x600](https://i.picsum.photos/id/688/800/600.jpg)
