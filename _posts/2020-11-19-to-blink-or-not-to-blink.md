@@ -79,8 +79,8 @@ avr libc provides c runtime libraries for AVR controllers. Binutils is binary ut
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hold your horses, we are not there yet :P Before writing any programs in embedded system, we need to be aware of HW connections we are suppose to sense/control in programs. In our case we need to blink an LED. Let's take a closer look at the [schematics](https://content.arduino.cc/assets/NanoV3.3_sch.pdf) to ascertain which port the LED is connected.
 As per the below schematic snippet, it is clear that LED is connected to port PB5. 
 
-![Image of LED to blink](../images/blinky_led_port.png)
-
+![Image of LED to blink](
+https://github.com/thyagaraja-naidu/blog/blob/master/images/blinky_led_port.png)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We have all the necessary information and required tools to control the LED now, It's time to *BLINK* the LED :)
 
 ## Some great heading (h2)
