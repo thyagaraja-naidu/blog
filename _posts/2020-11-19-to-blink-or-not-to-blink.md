@@ -19,7 +19,7 @@ Instructions given in this blog should work on most of the ubuntu flavoured OSs.
 2. Programmer software
 3. Your favourite code editor!
 
-### Tool setup
+### Software Tools Setup
 #### AVR GCC Compiler 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We will be using AVR GCC compiler which is based on a open source compiler developed by free software foundation(FSF). Full form of GCC is __GNU Compiler Collection__. GCC compiler can used for many languages like, C, C++ etc.
 
@@ -75,8 +75,13 @@ avr libc provides c runtime libraries for AVR controllers. Binutils is binary ut
   * > $ sudo dpkg -i code_1.51.1-1605051630_amd64.deb
 * MS code is installed now. Close the terminal.
 
+## Let's write some code, Finally!!!
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hold your horses, we are not there yet :P Before writing any programs in embedded system, we need to be aware of HW connections we are suppose to sense/control in programs. In our case we need to blink an LED. Let's take a closer look at the [schematics](https://content.arduino.cc/assets/NanoV3.3_sch.pdf) to ascertain which port the LED is connected.
+As per the below schematic snippet, it is clear that LED is connected to port PB5. 
 
-![800x600](https://i.picsum.photos/id/688/800/600.jpg)
+![Image of LED to blink](../images/blinky_led_port.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We have all the necessary information and required tools to control the LED now, It's time to *BLINK* the LED :)
 
 ## Some great heading (h2)
 
