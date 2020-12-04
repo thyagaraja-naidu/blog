@@ -83,29 +83,24 @@ As per the below schematic snippet, it is clear that LED is connected to port PB
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We have all the necessary information and required tools to control the LED now, It's time to *BLINK* the LED :)
 
-// F_CPU tells util/delay.h our clock frequency
-//#define F_CPU 8000000UL	// Orangutan frequency (8MHz)
-#define F_CPU 20000000UL	// Baby Orangutan frequency (20MHz)
-#include <avr/io.h>
-#include <util/delay.h>
 
-void delayms( uint16_t millis ) {
-	while ( millis ) {
-		_delay_ms( 1 );
-		millis--;
-	}
-}
-
-int main( void ) {
-	DDRD |= 1 << DDD1;				// set LED pin PD1 to output
-	while ( 1 ) {
-		PORTD &= ~( 1 << PORTD1 );	// LED off
-		delayms( 900 );				// delay 900 ms
-		PORTD |= 1 << PORTD1; 		// LED on
-		delayms( 100 );				// delay 100 ms
-	}
-	return 0;
-}
+    /* F_CPU tells util/delay.h our clock frequency */
+    #define F_CPU 16000000UL	
+    #include <avr/io.h>
+    #include <util/delay.h>
+    
+    int main(void) 
+    {
+       DDRB |= 1 << PB5;        /* set LED pin PB5 to output */
+       while(1) 
+       {
+          PORTD &= ~( 1 << PB5 ); /* LED off */
+          _delay_ms(900);         /* delay 900 ms */
+          PORTD |= 1 << PB5;      /* LED on */
+          _delay_ms(100);         /* delay 100 ms */
+       }
+       return 0;
+    }
 
 ## Some great heading (h2)
 
