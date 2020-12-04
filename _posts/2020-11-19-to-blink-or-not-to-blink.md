@@ -81,6 +81,8 @@ As per the below schematic snippet, it is clear that LED is connected to port PB
 
 ![Image of LED to blink](../images/blinky_led_port.png?raw=true)
 
+![led2](https://raw.githubusercontent.com/thyagaraja-naidu/blog/master/images/blinky_led_port.png)
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We have all the necessary information and required tools to control the LED now, It's time to *BLINK* the LED :)
 
 // F_CPU tells util/delay.h our clock frequency
