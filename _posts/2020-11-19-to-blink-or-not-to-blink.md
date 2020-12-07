@@ -12,7 +12,7 @@ title: To blink or not to blink :)
 ### Software development environment for blinky
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We will be using Bare metal programming technic to program the microcontroller. we will need below tools for the development.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I will be uning __Zorin OS__, which is a linux distribution based on ubuntu platform. You can download a copy of this linux flavour [here](https://zorinos.com/) for free :blush:
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I will be using __Zorin OS__, which is a linux distribution based on ubuntu platform. You can download a copy of this linux flavour [here](https://zorinos.com/) for free :blush:
 Instructions given in this blog should work on most of the ubuntu flavoured OSs.
 
 1. Compiler
@@ -91,7 +91,7 @@ As per the below schematic snippet, it is clear that LED is connected to port PB
     
     int main(void) 
     {
-       DDRB |= 1 << PB5;        /* set LED pin PB5 to output */
+       DDRB |= 1 << PB5;          /* set LED pin PB5 to output */
        while(1) 
        {
           PORTD &= ~( 1 << PB5 ); /* LED off */
